@@ -14,6 +14,8 @@ DAJAXICE_MEDIA_PREFIX="dajaxice"
 
 #online database
 import dj_database_url
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+ALLOWED_HOSTS = ['xampaper.herokuapp.com']
 DATABASES = {
     # staging database
     'default': {
