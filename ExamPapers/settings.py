@@ -8,7 +8,12 @@ TEMPLATE_DEBUG = DEBUG
 ADMINS = (
     ('Your Name', 'your_email@example.com'),
 )
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+ALLOWED_HOSTS = [exampaper.herokuapp.com’]
+import dj_database_url
 
+DATABASES[‘default’] = dj_database_url.config()
+SECURE_PROXY_SSL_HEADER = (‘HTTP_X_FORWARDED_PROTO’, ‘https’)
 MANAGERS = ADMINS
 DAJAXICE_MEDIA_PREFIX="dajaxice"
 
@@ -80,7 +85,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-	os.path.join(os.path.dirname(__file__),'resource/static').replace('\\','/'),
+	os.path.join(BASE_DIR ,'resource/static').replace('\\','/'),
 )
 
 # List of finder classes that know how to find static files in
