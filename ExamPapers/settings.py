@@ -23,6 +23,26 @@ DATABASES = {
         'PASSWORD': 'c83e5534a7e21a98d0545db63a58190f6c96fcf3779f8f72dd0640959246e6ff',                  # Not used with sqlite3.
         'HOST': 'ec2-54-225-67-3.compute-1.amazonaws.com',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '5432',                      # Set to empty string for default. Not used with sqlite3.
+    },
+    # dev db
+    'prod': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'd23ogluv8012a5',                      # Or path to database file if using sqlite3.
+        'USER': 'slzecnmkgrzllu',                      # Not used with sqlite3.
+        'PASSWORD': 'c83e5534a7e21a98d0545db63a58190f6c96fcf3779f8f72dd0640959246e6ff',                  # Not used with sqlite3.
+        'HOST': 'ec2-54-225-67-3.compute-1.amazonaws.com',                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '5432',                      # Set to empty string for default. Not used with sqlite3.
+    },
+}
+DATABASES = {
+    # staging database
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'd23ogluv8012a5',                      # Or path to database file if using sqlite3.
+        'USER': 'slzecnmkgrzllu',                      # Not used with sqlite3.
+        'PASSWORD': 'c83e5534a7e21a98d0545db63a58190f6c96fcf3779f8f72dd0640959246e6ff',                  # Not used with sqlite3.
+        'HOST': 'ec2-54-225-67-3.compute-1.amazonaws.com',                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '5432',                      # Set to empty string for default. Not used with sqlite3.
     }                    # Set to empty string for default. Not used with sqlite3.,
     # prod db
     'prod': {
