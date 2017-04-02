@@ -1,1 +1,1 @@
-web: gunicorn ExamPapers.wsgi --log-file -
+web: waitress-serve --port=$PORT ExamPapers.wsgi:application
